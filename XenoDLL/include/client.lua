@@ -6,19 +6,19 @@ local HttpService, UserInputService, InsertService = game:FindService("HttpServi
 local RunService, CoreGui, StarterGui = game:GetService("RunService"), game:FindService("CoreGui"), game:GetService("StarterGui")
 local VirtualInputManager, RobloxReplicatedStorage = Instance.new("VirtualInputManager"), game:GetService("RobloxReplicatedStorage")
 
-if RobloxReplicatedStorage:FindFirstChild("Xeno") then return end
+if RobloxReplicatedStorage:FindFirstChild("N-Sploit") then return end
 
 local XenoContainer = Instance.new("Folder", RobloxReplicatedStorage)
-XenoContainer.Name = "Xeno"
+XenoContainer.Name = "N-Sploit"
 local objectPointerContainer, scriptsContainer = Instance.new("Folder", XenoContainer), Instance.new("Folder", XenoContainer)
 objectPointerContainer.Name = "Instance Pointers"
 scriptsContainer.Name = "Scripts"
 
 local Xeno = {
 	about = {
-		_name = 'Xeno',
-		_version = '1.0.7',
-		_publisher = ".rizve | https://rizve.us.to"
+		_name = 'nsploit',
+		_version = '1.1',
+		_publisher = ".kz | https://discord.gg/FY2UmXhgje"
 	}
 }
 table.freeze(Xeno.about)
@@ -70,7 +70,7 @@ local libs = {
 
 if script.Name == "VRNavigation" then
 	StarterGui:SetCore("SendNotification", {
-		Title = "[Xeno]",
+		Title = "[N-Sploit]",
 		Text = "Used ingame method. When you leave the game it might crash!"
 	})
 end
@@ -431,7 +431,7 @@ function Bridge:SyncFiles()
 		getAllFiles("./")
 	end) if not success then
 		StarterGui:SetCore("SendNotification", {
-			Title = "[Xeno]",
+			Title = "[N-Sploit]",
 			Text = "Could not sync virtual files from client to external. Server was closed or it is being overloaded"
 		})
 		return
@@ -525,7 +525,7 @@ function Bridge:loadstring(source, chunkName)
 			end
 
 			if (tick() - clock > 5) then
-				warn("[Xeno]: loadstring failed and timed out")
+				warn("[N-Sploit]: loadstring failed and timed out")
 				for _, module in pairs(cachedModules) do
 					module:Destroy()
 				end
@@ -2461,7 +2461,7 @@ task.spawn(function() -- execution handler
 		coreModule.Parent = scriptsContainer
 
 		local thread = task.spawn(listen, coreModule)
-		delay(2.5, function()
+		delay(1, function()
 			coreModule:Destroy()
 			task.cancel(thread)
 		end)
