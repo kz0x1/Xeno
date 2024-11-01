@@ -71,7 +71,7 @@ local libs = {
 if script.Name == "VRNavigation" then
 	StarterGui:SetCore("SendNotification", {
 		Title = "[Xeno]",
-		Text = "Used ingame method. When you leave the game it might crash!"
+		Text = "Used in-game injection. When you leave the game it might crash!"
 	})
 end
 
