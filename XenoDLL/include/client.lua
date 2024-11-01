@@ -1,5 +1,6 @@
 --!native
 --!optimize 2
+--!made execution a little fast
 local XENO_UNIQUE = "%XENO_UNIQUE_ID%"
 
 local HttpService, UserInputService, InsertService = game:FindService("HttpService"), game:FindService("UserInputService"), game:FindService("InsertService")
