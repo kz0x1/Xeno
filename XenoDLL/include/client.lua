@@ -70,7 +70,7 @@ local libs = {
 
 if script.Name == "VRNavigation" then
 	StarterGui:SetCore("SendNotification", {
-		Title = "[Xeno]",
+		Title = "N-Sploit Notification",
 		Text = "Used ingame method. When you leave the game it might crash!"
 	})
 end
@@ -431,7 +431,7 @@ function Bridge:SyncFiles()
 		getAllFiles("./")
 	end) if not success then
 		StarterGui:SetCore("SendNotification", {
-			Title = "[Xeno]",
+			Title = "N-Sploit Notification",
 			Text = "Could not sync virtual files from client to external. Server was closed or it is being overloaded"
 		})
 		return
@@ -525,7 +525,7 @@ function Bridge:loadstring(source, chunkName)
 			end
 
 			if (tick() - clock > 5) then
-				warn("[Xeno]: loadstring failed and timed out")
+				warn("N-Sploit Notification: loadstring failed and timed out")
 				for _, module in pairs(cachedModules) do
 					module:Destroy()
 				end
